@@ -1,0 +1,42 @@
+{
+  "note": "Imagens de licença livre (Pexels License — uso comercial permitido, atribuição não obrigatória). Registros mantidos por disciplina de procedência.",
+  "images": [
+    {
+      "file": "../para-quem.png",
+      "provider": "fornecida pelo usuário",
+      "photoId": null,
+      "sourceUrl": null,
+      "author": "usuário",
+      "license": "direitos do usuário",
+      "alt": "Retrato para ilustrar para quem o aulão é indicado (substitui a foto de banco Pexels 8927460)",
+      "replaced": "assets/stock/para-quem.jpg"
+    },
+    {
+      "file": "materiais.jpg",
+      "provider": "Pexels",
+      "photoId": 5710614,
+      "sourceUrl": "https://pexels.com/photo/a-person-writing-on-a-notebook-5710614",
+      "author": "não identificado na busca",
+      "license": "Pexels License",
+      "alt": "Mão escrevendo com caneta em um caderno"
+    },
+    {
+      "file": "ao-vivo.jpg",
+      "provider": "Pexels",
+      "photoId": 3960127,
+      "sourceUrl": "https://www.pexels.com/photo/woman-sitting-on-white-couch-using-laptop-computer-3960127/",
+      "author": "não identificado na busca",
+      "license": "Pexels License",
+      "alt": "Pessoa acompanhando aula ao vivo pelo notebook em casa"
+    },
+    {
+      "file": "../sergio.jpg",
+      "provider": "fornecida pelo usuário",
+      "photoId": null,
+      "sourceUrl": null,
+      "author": "Sergio (usuário)",
+      "license": "direitos do usuário",
+      "alt": "Foto de Sergio, condutor do aulão"
+    }
+  ]
+}
