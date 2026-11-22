@@ -37,6 +37,15 @@
       "author": "Sergio (usuário)",
       "license": "direitos do usuário",
       "alt": "Foto de Sergio, condutor do aulão"
+    },
+    {
+      "file": "vsl-thumb.jpg",
+      "provider": "YouTube (thumbnail oficial do vídeo de exemplo)",
+      "photoId": "P21vyxvQqc0",
+      "sourceUrl": "https://www.youtube.com/watch?v=P21vyxvQqc0",
+      "author": "canal do vídeo de exemplo indicado pelo usuário",
+      "license": "thumbnail do vídeo de exemplo — substituir junto com o vídeo definitivo da VSL",
+      "alt": "Thumbnail do vídeo de apresentação do aulão"
     }
   ]
 }
