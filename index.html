@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>REFÉM DAS EMOÇÕES — Entenda por que você sente o que sente e aprenda a lidar em 3h ao vivo</title>
-<meta name="description" content="Aulão ao vivo de 3 horas no YouTube: entenda por que você sente o que sente e saia com seu mapa emocional e o protocolo pronto para aplicar em 48h. Ingresso único R$97.">
+<meta name="description" content="Encontro ao vivo online de 3 horas: entenda por que você sente o que sente e saia com seu mapa emocional e o protocolo pronto para aplicar em 48h. Ingresso único R$97.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&amp;family=Crimson+Pro:ital,wght@0,500;0,600;0,700;1,500&amp;display=swap" rel="stylesheet">
@@ -210,22 +210,61 @@ figcaption{font-size:13px;color:var(--muted);padding:10px 14px;border-top:1px so
 .ingresso{text-align:center}
 .ingresso .kicker{margin:0 0 8px}
 .ingresso h2{margin:0 auto 32px;max-width:680px}
-.ingresso-grid{display:grid;grid-template-columns:1fr;gap:18px;margin:0 0 24px;text-align:left}
+.ingresso-grid{display:grid;grid-template-columns:1fr;gap:18px;margin:0 auto 24px;max-width:880px;text-align:left}
 @media(min-width:768px){.ingresso-grid{grid-template-columns:1fr 1fr}}
 .por-que{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px}
 .por-que h3{font-family:'Commissioner',sans-serif;font-size:19px;margin:0 0 8px;color:var(--text);font-weight:700}
 .por-que p{color:var(--muted);margin:0;font-size:15.5px}
-.ingresso-banner{display:flex;flex-direction:column;gap:22px;background:linear-gradient(160deg,#16294d,#0e1f3c);border:1px solid #24406b;border-radius:20px;padding:26px 28px;text-align:left;box-shadow:0 1px 2px rgba(16,42,67,.05),0 18px 44px rgba(19,116,209,.16)}
-.ingresso-banner .vagas-head{display:flex;gap:14px;align-items:flex-start}
-.ingresso-banner .vagas-head .od-icon{flex:none;font-size:26px;color:#8fc1f5;margin-top:2px}
-.ingresso-banner h3{font-family:'Commissioner',sans-serif;font-size:18px;color:#fff;margin:0 0 4px}
-.ingresso-banner .vagas-head p{font-size:14.5px;color:#c9d8ef;margin:0;line-height:1.55}
-.checkout-card{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;background:var(--card);border-radius:14px;padding:20px 24px}
-.checkout-card .pline{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-.checkout-card .preco{font-size:clamp(1.9rem,3vw,2.4rem)}
-.checkout-card .tudo{font-size:15px;font-weight:600;color:var(--muted)}
-.checkout-card .cta{border-radius:999px;padding:14px 26px;font-size:16px}
-.garantias{display:grid;grid-template-columns:1fr;gap:18px;margin:26px 0 0;text-align:left}
+/* ---------- Card de oferta + bônus (modelos desktop/mobile) ---------- */
+.oferta-card{display:grid;grid-template-columns:1fr;grid-template-areas:"a" "b" "c";background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 1px 2px rgba(16,42,67,.05),0 18px 44px rgba(19,116,209,.16);text-align:left;padding:0;border-bottom:none}
+.oferta-a{grid-area:a;background:linear-gradient(160deg,#16294d,#0e1f3c);color:#fff;padding:28px 30px 22px;display:flex;flex-direction:column;gap:16px}
+.oferta-chip{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:rgba(255,255,255,.1);border-radius:999px;padding:6px 14px;font-size:12px;font-weight:600;color:#a5c9ff}
+.oferta-chip .od-icon{font-size:16px}
+.oferta-a h3{font-family:'Crimson Pro','Commissioner',serif;font-weight:600;font-size:23px;line-height:1.25;letter-spacing:-.01em;margin:0;color:#fff}
+.oferta-a p{font-size:14.5px;color:#b8cae3;margin:8px 0 0;line-height:1.55}
+.oferta-c{grid-area:c;background:linear-gradient(160deg,#16294d,#0e1f3c);color:#fff;padding:22px 30px 28px;border-top:1px solid rgba(255,255,255,.12)}
+.oferta-valor{display:flex;flex-direction:column;gap:10px;margin-bottom:18px}
+.oferta-valor div{display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:500;color:#d6e4f7}
+.oferta-valor .od-icon{font-size:17px;color:#8fc1f5;flex:none}
+.oferta-c .pline{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.oferta-c .preco{font-family:'Crimson Pro','Commissioner',serif;font-weight:600;font-size:clamp(2.1rem,4vw,2.5rem);line-height:1;color:#fff}
+.oferta-c .tudo{font-size:13px;font-weight:500;color:#9bb4d6}
+.oferta-acoes{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.oferta-acoes .cta{width:100%;border-radius:999px;padding:14px 26px;font-size:15.5px}
+.zap-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:10px 20px;font-size:13.5px;font-weight:500;color:#d6e4f7;text-decoration:none;transition:background .15s ease}
+.zap-cta:hover{background:rgba(255,255,255,.12)}
+.zap-cta:focus-visible{outline:3px solid #8fc1f5;outline-offset:2px}
+.zap-cta .od-icon{font-size:18px;color:#1ea952}
+.oferta-b{grid-area:b;background:#fafbfd;padding:28px 30px}
+.oferta-b-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin-bottom:18px}
+.oferta-b-head h4{font-family:'Commissioner',sans-serif;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#0f5fb3;margin:0}
+.oferta-b-badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#4b6280}
+.oferta-b-badge .od-icon{font-size:16px;color:#0f5fb3}
+.bonus-destaque{background:#eef5ff;border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+.bonus-destaque-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.destaque-titulo{display:flex;align-items:center;gap:12px;min-width:0}
+.destaque-ico{flex:none;width:38px;height:38px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;color:#0f5fb3;box-shadow:0 2px 6px rgba(13,34,68,.06)}
+.destaque-ico .od-icon{font-size:20px}
+.bb-label{display:block;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#0f5fb3}
+.bonus-destaque h5{font-family:'Commissioner',sans-serif;font-size:16.5px;font-weight:700;color:#0d2244;margin:2px 0 0;line-height:1.3}
+.chip-50{display:inline-flex;align-items:center;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#0f5fb3;background:rgba(19,116,209,.1);border:1px solid rgba(19,116,209,.3);border-radius:999px;padding:4px 10px;flex:none}
+.bonus-destaque .corpo{padding-left:50px}
+.bonus-destaque .ganho{font-size:13.5px;font-weight:600;color:#0f5fb3;margin:0}
+.bonus-destaque p.desc{font-size:13px;color:#4e617a;margin:4px 0 0;line-height:1.5}
+.lista-bonus{list-style:none;margin:8px 0 0;padding:0}
+.lista-bonus li{display:flex;gap:14px;padding:16px 0;border-top:1px solid #e8eef6}
+.lista-bonus li:first-child{border-top:0}
+.li-ico{flex:none;width:36px;height:36px;border-radius:11px;background:#eff4fa;display:flex;align-items:center;justify-content:center;color:#0f5fb3;margin-top:2px}
+.li-ico .od-icon{font-size:19px}
+.li-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.lista-bonus h5{font-family:'Commissioner',sans-serif;font-size:15px;font-weight:700;color:#0d2244;margin:0;line-height:1.3}
+.bonus-num{font-size:11px;font-weight:600;color:#5b7290;flex:none}
+.lista-bonus .ganho{font-size:13px;font-weight:600;color:#0f5fb3;margin:3px 0 0}
+.lista-bonus p.desc{font-size:13px;color:#52657e;margin:4px 0 0;line-height:1.5}
+.mat-chips{display:flex;flex-wrap:wrap;gap:6px;padding-top:4px;margin:0}
+.mat-chips span{background:#fff;border:1px solid #e3ebf5;border-radius:8px;padding:2px 10px;font-size:12px;font-weight:500;color:#2e486b}
+@media(min-width:900px){.oferta-card{grid-template-columns:5fr 7fr;grid-template-areas:"a b" "c b"}}
+.garantias{display:grid;grid-template-columns:1fr;gap:18px;margin:26px auto 0;max-width:880px;text-align:left}
 @media(min-width:768px){.garantias{grid-template-columns:repeat(3,1fr)}}
 .garantias>div{display:flex;gap:12px;align-items:flex-start}
 .garantias .od-icon{flex:none;font-size:24px;color:var(--accent-text);margin-top:2px}
@@ -276,9 +315,12 @@ footer a{color:var(--accent-text);text-decoration:none}
 #progresso{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#1374d1,#1e86e8);z-index:60}
 
 /* ---------- Mobile CTA bar ---------- */
-.mobcta{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;align-items:center;justify-content:space-between;gap:14px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line)}
-.mobcta .price-s{font-family:'Crimson Pro',serif;font-weight:700;font-size:20px;white-space:nowrap}
-.mobcta .cta{padding:13px 22px;font-size:15px;border-radius:12px}
+.mobcta{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.mobcta-wa{width:48px;height:48px;flex:none;border-radius:50%;background:#1EA952;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 12px rgba(30,169,82,.4);transition:transform .18s ease-out,box-shadow .18s ease-out}
+.mobcta-wa:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(30,169,82,.45)}
+.mobcta-wa:focus-visible{outline:3px solid #1374d1;outline-offset:2px}
+.mobcta-wa svg{width:26px;height:26px;fill:#fff}
+.mobcta .cta{flex:1;padding:13px 22px;font-size:15px;border-radius:12px}
 @media(max-width:767px){
   .mobcta{display:flex}
   body{padding-bottom:84px}
@@ -287,7 +329,11 @@ footer a{color:var(--accent-text);text-decoration:none}
   section{padding:60px 0}
   .conduz{flex-direction:column}
   #fechamento .cta.big,#bonus .cta{white-space:normal;width:100%;max-width:400px;font-size:17px;padding:16px 24px}
-  .checkout-card .cta{flex:1 1 100%;justify-content:center;white-space:normal}
+  .oferta-a{padding:22px 20px 18px;gap:12px}
+  .oferta-b{padding:22px 20px}
+  .oferta-c{padding:18px 20px 22px}
+  .bonus-destaque .corpo{padding-left:0}
+  .oferta-acoes .cta,.zap-cta{white-space:normal}
   #para-quem .two{gap:0}
   #para-quem .two>div:first-child{display:contents}
   #para-quem .two figure.photo{order:3;margin:32px 0 0}
@@ -312,6 +358,41 @@ footer a{color:var(--accent-text);text-decoration:none}
 .stagger.in>*:nth-child(4){transition-delay:.29s}
 .stagger.in>*:nth-child(5){transition-delay:.37s}
 .stagger.in>*:nth-child(6){transition-delay:.45s}
+
+/* ---------- Modal lista de espera ---------- */
+.modal-backdrop{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(10,22,40,.48);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.modal-backdrop.open{display:flex}
+.modal{position:relative;width:100%;max-width:480px;max-height:calc(100vh - 40px);overflow:auto;background:#fff;border-radius:24px;padding:42px 38px 32px;box-shadow:0 32px 80px rgba(10,22,40,.28),0 4px 18px rgba(10,22,40,.12);transform:translateY(20px) scale(.96);opacity:0;transition:transform .34s cubic-bezier(.16,1,.3,1),opacity .28s ease}
+.modal-backdrop.open .modal{transform:none;opacity:1}
+.modal-x{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--muted);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:color .15s ease,border-color .15s ease,background .15s ease}
+.modal-x:hover{color:var(--text);border-color:#c6d1e1;background:#f4f7fb}
+.modal-x:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.modal-badge{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#0b4a8a;background:var(--amber-soft);border:1px solid var(--amber-line);border-radius:999px;padding:7px 14px}
+.modal-badge i{width:7px;height:7px;border-radius:50%;background:var(--amber);flex:none;animation:pulse-dot 1.8s ease-out infinite}
+@keyframes pulse-dot{0%,100%{box-shadow:0 0 0 0 rgba(19,116,209,.35)}50%{box-shadow:0 0 0 6px rgba(19,116,209,0)}}
+.modal h3{font-family:'Crimson Pro','Commissioner',serif;font-weight:600;font-size:30px;line-height:1.2;margin:16px 0 0;color:var(--text)}
+.modal-sub{font-size:15px;color:var(--muted);margin:10px 0 0}
+.fld{margin-top:16px}
+.fld label{display:block;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.fld input{width:100%;height:50px;padding:0 16px;border-radius:12px;border:1.5px solid var(--line);background:#fbfcfe;font-family:inherit;font-size:16px;color:var(--text);transition:border-color .15s ease,box-shadow .15s ease,background .15s ease}
+.fld input:focus{outline:none;border-color:var(--amber);box-shadow:0 0 0 4px var(--amber-soft);background:#fff}
+.fld input.erro{border-color:#d64545;background:#fff8f8}
+.fld-erro{display:none;font-size:12.5px;color:#b23030;margin-top:6px}
+.fld.show-erro .fld-erro{display:block}
+.modal form .cta{width:100%;margin-top:22px}
+.modal .cta[disabled]{opacity:.65;cursor:wait;transform:none}
+.modal-fine{font-size:12.5px;color:var(--muted);text-align:center;margin:12px 0 0;line-height:1.5}
+.envio-erro{display:none;margin-top:14px;font-size:13.5px;color:#b23030;background:#fdf1f1;border:1px solid #f0c4c4;border-radius:10px;padding:10px 14px;text-align:center}
+.envio-erro.show{display:block}
+.modal-ok{display:none;text-align:center;padding:6px 0 4px}
+.modal.enviado form,.modal.enviado .modal-sub,.modal.enviado .modal-badge{display:none}
+.modal.enviado .modal-ok{display:block}
+.ok-circle{width:66px;height:66px;border-radius:50%;background:linear-gradient(135deg,#1374d1,#0f5fb3);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;box-shadow:0 14px 30px rgba(19,116,209,.3)}
+.ok-circle svg{width:30px;height:30px}
+.modal-ok h4{font-family:'Crimson Pro','Commissioner',serif;font-weight:600;font-size:27px;margin:0 0 8px}
+.modal-ok p{font-size:15px;color:var(--muted);margin:0}
+.modal-ok .fine{font-size:12.5px;margin-top:14px}
+@media(max-width:480px){.modal{padding:34px 22px 26px;border-radius:20px}.modal h3{font-size:26px}}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .reveal,.stagger>*{opacity:1;transform:none;transition:none}
@@ -333,7 +414,7 @@ footer a{color:var(--accent-text);text-decoration:none}
       <a href="#ingresso">Ingresso</a>
       <a href="#faq">Dúvidas</a>
     </nav>
-    <a class="cta" href="https://google.com">QUERO PARTICIPAR</a>
+    <a class="cta" href="#ingresso" data-scroll="ingresso" data-modal="1">QUERO PARTICIPAR</a>
   </div>
 </header>
 
@@ -347,7 +428,7 @@ footer a{color:var(--accent-text);text-decoration:none}
     <div class="vsl reveal" data-od-id="hero-vsl">
       <div class="vsl-frame">
         <button class="vsl-facade" type="button" aria-label="Assistir à apresentação do aulão">
-          <img src="assets/stock/vsl-thumb.jpg" alt="Apresentação do aulão Refém das Emoções no YouTube" width="1280" height="720" loading="lazy" decoding="async">
+          <img src="assets/stock/vsl-thumb.jpg" alt="Apresentação do aulão Refém das Emoções" width="1280" height="720" loading="lazy" decoding="async">
           <span class="vsl-play" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg></span>
         </button>
       </div>
@@ -359,8 +440,8 @@ footer a{color:var(--accent-text);text-decoration:none}
     </div>
     </div>
     <div class="hero-steps stagger" aria-label="Como funciona em 3 passos">
-      <div class="passo3"><span class="num">1</span><span><strong>Garanta seu ingresso</strong>R$97, vaga na sala do ao vivo no YouTube.</span></div>
-      <div class="passo3"><span class="num">2</span><span><strong>Preencha as 2 folhas</strong>Bônus Quem Sou / Quem Quero Ser, 10–15 min à mão.</span></div>
+      <div class="passo3"><span class="num">1</span><span><strong>Garanta seu ingresso</strong>R$97, vaga na sala do encontro ao vivo.</span></div>
+      <div class="passo3"><span class="num">2</span><span><strong>Preencha as 2 folhas</strong>Bônus Quem Sou / Quem Quero Ser.</span></div>
       <div class="passo3"><span class="num">3</span><span><strong>Implemente ao vivo</strong>3h com o Sergio e saia com mapa + protocolo + roteiro de 48h.</span></div>
     </div>
     <div class="ticket-meta ticket-meta-outside reveal">
@@ -371,7 +452,7 @@ footer a{color:var(--accent-text);text-decoration:none}
     <div class="ticket-box reveal">
       <div class="ticket-row">
         <span class="preco">R$97<small>ingresso único</small></span>
-        <a class="cta big pulse" href="https://google.com">QUERO PARTICIPAR<svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a class="cta big pulse" href="#ingresso" data-scroll="ingresso" data-modal="1">QUERO PARTICIPAR<svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
       </div>
       <p class="micro" style="margin:0">Ingresso único — você entra, implementa ao vivo e sai com <strong>5 materiais prontos</strong>.</p>
     </div>
@@ -379,12 +460,13 @@ footer a{color:var(--accent-text);text-decoration:none}
 </section>
 
 <main>
-<section id="porque">
+<section id="porque" style="padding-bottom: 84px;">
   <div class="wrap">
     <div class="diag-ponte-copy reveal">
-      <p>Você acorda com o peito apertado antes mesmo de sair da cama, passa o dia remoendo aquela conversa, tenta se distrair rolando a tela, se cobra para pensar positivo — e à noite explode por uma bobagem e dorme com culpa. No dia seguinte, tudo recomeça: a cabeça não desliga, o foco no trabalho trava, a paciência com quem você ama acaba em minutos.</p>
-      <p>Não é falta de disciplina, nem de força de vontade. É que ignorar, se cobrar para ser forte ou tentar não sentir só empurra a emoção para baixo — ela volta no mesmo lugar, porque a trava nunca esteve na superfície. Ela está em um nível específico: no ambiente que te sobrecarrega, no comportamento que repete, na capacidade que falta na hora do aperto, na crença que roda em silêncio ou na identidade que você assumiu como se fosse você.</p>
-      <p>É por isso que o aulão existe. Em 3 horas ao vivo, com as duas folhas Quem Sou / Quem Quero Ser prontas, você localiza onde aperta, mede a intensidade de 0 a 10, descobre em qual nível está a sua trava e aplica o Método S.E.R. no seu caso real — para sair com o mapa, o protocolo de Respirar, Nomear e Escolher e o roteiro das próximas 48 horas prontos para testar na vida de verdade.</p>
+      <p>Você acorda com <strong>o peito apertado</strong> antes mesmo de sair da cama, passa o dia remoendo aquela conversa, tenta se distrair rolando a tela, se cobra para pensar positivo — e à noite <strong>explode por uma bobagem e dorme com culpa</strong>. No dia seguinte, <strong>tudo recomeça:</strong> a cabeça não desliga, o foco no trabalho trava, a paciência com quem você ama acaba em minutos.
+</p>
+      <p><strong>Não é falta de disciplina, nem de força de vontade.</strong> É que ignorar, se cobrar para ser forte ou tentar não sentir só empurra a emoção para baixo — ela volta no mesmo lugar, porque <strong>a trava nunca esteve na superfície</strong>. Ela está em <strong>um nível específico:</strong> no ambiente que te sobrecarrega, no comportamento que repete, na capacidade que falta na hora do aperto, na crença que roda em silêncio ou na identidade que você assumiu como se fosse você.</p>
+      <p>É por isso que o aulão existe. Em <strong>3 horas ao vivo</strong>, com as duas folhas Quem Sou / Quem Quero Ser prontas, você localiza onde aperta, mede a intensidade de 0 a 10, <strong>descobre em qual nível está a sua trava</strong> e aplica o <strong>Método S.E.R.</strong> no seu caso real — para sair com o <strong>mapa, o protocolo de Respirar, Nomear e Escolher</strong> e o <strong>roteiro das próximas 48 horas</strong> prontos para testar na vida de verdade.</p>
     </div>
     <div class="diag-grid">
       <div class="diag-copy">
@@ -471,7 +553,7 @@ footer a{color:var(--accent-text);text-decoration:none}
         </div>
       </div>
     </div>
-    <p class="ser-close reveal">S, E e R não são três assuntos. São três passos repetidos no mesmo caso, na mesma tarde, até virarem automáticos.</p>
+    
   </div>
 </section>
 
@@ -490,7 +572,7 @@ footer a{color:var(--accent-text);text-decoration:none}
           <div class="mat"><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5 9 17l6 2 5-2V4.5L15 7 9 5l-5 2z"></path><path d="M9 5v12M15 7v12"></path></svg><div><strong>5. Roteiro de 48h</strong><span>o que fazer nas duas manhãs seguintes ao aulão</span></div></div>
         </div>
         <p class="reveal">Você preenche no ao vivo. Você aplica na mesma noite. Nada para fazer em semanas.</p>
-        <a class="cta reveal" href="https://google.com">GARANTIR MEU INGRESSO<svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a class="cta reveal" href="#ingresso" data-scroll="ingresso" data-modal="1">GARANTIR MEU INGRESSO<svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
       </div>
       <figure class="photo reveal">
         <img src="assets/stock/materiais.jpg" alt="Mão escrevendo com caneta em um caderno, preenchendo o mapa à mão durante o aulão" width="1000" height="667" loading="lazy" decoding="async">
@@ -517,7 +599,7 @@ footer a{color:var(--accent-text);text-decoration:none}
         <p>Retrate com a mesma clareza quem você é hoje: reações, travas recorrentes e padrões de pensamento.</p>
       </article>
     </div>
-    <a class="cta reveal" href="https://google.com">Garantir meu ingresso e receber o bônus<svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    <a class="cta reveal" href="#ingresso" data-scroll="ingresso" data-modal="1">Garantir meu ingresso e receber o bônus<svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
   </div>
 </section>
 
@@ -579,7 +661,7 @@ footer a{color:var(--accent-text);text-decoration:none}
 </section>
 
 <section id="ingresso">
-  <div class="wrap narrow ingresso">
+  <div class="wrap ingresso">
     <span class="kicker reveal">O Ingresso</span>
     <h2 class="reveal">Por que o ingresso é barato e por que não é de graça</h2>
     <div class="ingresso-grid stagger">
@@ -592,26 +674,60 @@ footer a{color:var(--accent-text);text-decoration:none}
         <p>Quem entra de graça raramente aparece; quem paga valoriza o próprio tempo e implementa. O valor simbólico garante uma sala comprometida.</p>
       </div>
     </div>
-    <div class="ingresso-banner reveal">
-      <div class="vagas-head">
-        <svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+    <section class="oferta-card reveal" data-od-id="card-oferta-bonus">
+      <div class="oferta-a">
+        <span class="oferta-chip"><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Evento online ao vivo • 3h</span>
         <div>
           <h3>Por ser um evento online ao vivo, as vagas são limitadas</h3>
           <p>A sala tem capacidade reduzida para garantir implementação e perguntas ao vivo.</p>
         </div>
       </div>
-      <div class="checkout-card">
+      <div class="oferta-b" data-od-id="bonus-inclusos-banner">
+        <div class="oferta-b-head">
+          <h4>O que você recebe além das 3h ao vivo</h4>
+          <span class="oferta-b-badge"><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v10H4V12"></path><path d="M2 7h20v5H2z"></path><path d="M12 22V7"></path><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>4 bônus inclusos</span>
+        </div>
+        <article class="bonus-destaque">
+          <div class="bonus-destaque-top">
+            <div class="destaque-titulo">
+              <span class="destaque-ico" aria-hidden="true"><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg></span>
+              <div>
+                <span class="bb-label">Bônus 01 • Destaque</span>
+                <h5>Gravação da aula</h5>
+              </div>
+            </div>
+            <span class="chip-50">Somente primeiros 50</span>
+          </div>
+          <div class="corpo">
+            <p class="ganho">Revê o passo a passo no seu ritmo</p>
+            <p class="desc">Gravação da aula com acesso vitalício, para reassistir quando quiser.</p>
+          </div>
+        </article>
+        <ul class="lista-bonus">
+          <li><span class="li-ico" aria-hidden="true"><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"></path></svg></span><div><div class="li-head"><h5>Grupo de alunos no WhatsApp</h5><span class="bonus-num">Bônus 02</span></div><p class="ganho">O suporte continua depois das 3h</p><p class="desc">Troque experiências, participe dos encontros online eventuais e troque material com a turma.</p></div></li>
+          <li><span class="li-ico" aria-hidden="true"><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1"></rect><path d="M9 13l2 2 4-4"></path></svg></span><div><div class="li-head"><h5>Exercício Quem Sou / Quem Quero Ser</h5><span class="bonus-num">Bônus 03</span></div><p class="ganho">Entra na sala com direção definida</p><p class="desc">As duas folhas para preencher antes do aulão, em 10–15 minutos à mão.</p></div></li>
+          <li><span class="li-ico" aria-hidden="true"><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></span><div><div class="li-head"><h5>Todo o material didático</h5><span class="bonus-num">Bônus 04</span></div><p class="ganho">Sai com 5 ferramentas prontas para aplicar</p><div class="mat-chips"><span>Mapa S.E.R.</span><span>Termômetro da Ansiedade</span><span>Diagnóstico do Nível</span><span>Protocolo de 3 Passos</span><span>Roteiro de 48h</span></div></div></li>
+        </ul>
+      </div>
+      <div class="oferta-c">
+        <div class="oferta-valor">
+          <div><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="M22 4L12 14.01l-9-9"></path></svg>3 horas de aula ao vivo com Q&amp;A</div>
+          <div><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="M22 4L12 14.01l-9-9"></path></svg>4 bônus exclusivos inclusos</div>
+        </div>
         <div class="pline">
           <span class="preco">R$97</span>
           <span class="tudo">Ingresso único • Tudo incluso</span>
         </div>
-        <a class="cta" href="https://google.com"><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"></path><path d="M13 7v2m0 2v2m0 2v2"></path></svg>Garantir meu ingresso</a>
+        <div class="oferta-acoes">
+          <button class="cta" type="button" id="cta-lista-espera" data-od-id="cta-banner-ingresso"><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"></path><path d="M13 7v2m0 2v2m0 2v2"></path></svg>Garantir meu ingresso</button>
+          <a class="zap-cta" href="https://wa.me/5585994157371?text=Duvidas%20sobre%20o%20aul%C3%A3o%20Ref%C3%A9m%20das%20emo%C3%A7%C3%B5es%3F" target="_blank" rel="noopener"><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"></path></svg>Tirar dúvidas no WhatsApp</a>
+        </div>
       </div>
-    </div>
+    </section>
     <div class="garantias stagger">
       <div><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-3 8.6-7 10-4-1.4-7-5.4-7-10V6z"></path><path d="M9 12l2 2 4-4"></path></svg><div><h4>Garantia</h4><p>Participou e não viu sentido? Devolução de 100% do valor.</p></div></div>
       <div><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg><div><h4>Privacidade</h4><p>Você não precisa abrir câmera nem microfone se não quiser.</p></div></div>
-      <div><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M10 8.5l6 3.5-6 3.5z"></path></svg><div><h4>Reprise</h4><p>Acesso ao replay por 7 dias após a aula.</p></div></div>
+      <div><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M10 8.5l6 3.5-6 3.5z"></path></svg><div><h4>Reprise</h4><p>Gravação da aula com acesso vitalício — restrita aos primeiros 50 inscritos.</p></div></div>
     </div>
   </div>
 </section>
@@ -623,10 +739,11 @@ footer a{color:var(--accent-text);text-decoration:none}
     <div class="conduz reveal">
       <img class="foto-sergio" src="assets/sergio.jpg" alt="Foto de Sergio, condutor do aulão Refém das Emoções" width="148" height="148" loading="lazy" decoding="async">
       <div>
-        <p>Eu sempre me considerei tímido. Tinha um e-commerce de produtos eróticos e mesmo morrendo de vergonha em festa, falava do tema com naturalidade para vender. Depois travei para gravar vídeo, achei que tímido não gravava, até entender que <strong>ser</strong> é diferente de <strong>estar</strong>.</p>
-        <p>Hoje dou palestra, gravo vídeos, dou aulas e conduzo o podcast SLCast sobre mente, comportamento e ansiedade. Criei este aulão porque foi o Níveis da Mudança que me tirou da trava de identidade, e é isso que vou te mostrar ao vivo.</p>
-        <p class="assin">Sergio</p>
-        <div class="roles"><span class="chip">palestras</span><span class="chip">vídeos</span><span class="chip">aulas</span><span class="chip">podcast SLCast</span></div>
+        <p>Atuo como <strong>Hipnoterapeuta há mais de 5 anos</strong>, usando a Hipnose como ferramenta terapêutica. Trabalho com Hipnose Regressiva, Regressão de vidas passadas e as técnicas mais avançadas da Hipnoterapia — comprometido em ajudar você a se livrar das suas dores e angústias, para que você tenha a vida que merece.</p>
+        <p>A Hipnoterapia trata desde questões emocionais até problemas comportamentais: ansiedade, fobias, luto e separações, depressão, maus hábitos e vícios, perda de peso, hábitos de vida saudáveis e muito mais.</p>
+        <p>Conduzo encontros ao vivo sobre feridas emocionais, crio conteúdo no @sergiolima.jr e mantenho atendimentos presenciais com foco em <strong>criança interior</strong>. Este protocolo nasceu no consultório, ao ver que a maioria travava no mesmo ponto: sabia que era da infância, mas <strong>não sabia qual ferida comandava</strong>.</p>
+        <p class="assin">Sergio Lima Jr. | Hipnoterapeuta há 5+ anos, foco em terapias regressivas e ressignificação das emoções</p>
+        <div class="roles"><span class="chip">hipnoterapeuta</span><span class="chip">hipnose regressiva</span><span class="chip">ressignificação</span><span class="chip">liberdade emocional</span></div>
       </div>
     </div>
   </div>
@@ -639,7 +756,7 @@ footer a{color:var(--accent-text);text-decoration:none}
     <div class="faq reveal">
       <details>
         <summary>É ao vivo mesmo ou é gravação?<svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
-        <p>Ao vivo: 3 horas no YouTube, com implementação junto e perguntas e respostas no fechamento. Você faz enquanto ainda estamos juntos.</p>
+        <p>Ao vivo: 3 horas de encontro online, com implementação junto e perguntas e respostas no fechamento. Você faz enquanto ainda estamos juntos.</p>
       </details>
       <details>
         <summary>O que exatamente eu levo do aulão?<svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
@@ -655,7 +772,7 @@ footer a{color:var(--accent-text);text-decoration:none}
       </details>
       <details>
         <summary>Preciso estar ao vivo no horário?<svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
-        <p>Sim. São 3 horas ao vivo no YouTube, com implementação junto e perguntas e respostas no fechamento — quem faz junto sai com a ficha preenchida, não só com anotação.</p>
+        <p>Sim. São 3 horas de encontro ao vivo online, com implementação junto e perguntas e respostas no fechamento — quem faz junto sai com a ficha preenchida, não só com anotação.</p>
       </details>
       <details>
         <summary>Preciso preparar algo antes?<svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
@@ -663,7 +780,7 @@ footer a{color:var(--accent-text);text-decoration:none}
       </details>
       <details>
         <summary>Onde acontece o aulão?<svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
-        <p>No YouTube, online e ao vivo. O ingresso garante sua vaga na sala — por ser ao vivo, as vagas são limitadas.</p>
+        <p>Encontro ao vivo online. O ingresso garante sua vaga na sala — por ser ao vivo, as vagas são limitadas.</p>
       </details>
       <details>
         <summary>E se eu nunca conseguir aplicar nada sozinho?<svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
@@ -676,12 +793,12 @@ footer a{color:var(--accent-text);text-decoration:none}
 <section class="fechar" id="fechamento" style="padding-top: 54px; padding-bottom: 54px;">
   <div class="wrap" style="line-height: 26.4px; padding-bottom: 56px; padding-top: 56px;">
     <h2 class="reveal">Você já sabe o que precisa saber</h2>
-    <p class="lead reveal" style="margin:0 auto 8px;max-width:560px">Você quer entender o que sente. Você entendeu por que nunca deu certo. Você sabe quando vai acontecer e o que vamos fazer juntos.</p>
+    <p class="lead reveal" style="margin:0 auto 8px;max-width:560px">Você quer entender o que sente. Você quer entender por que nunca deu certo. Você quer mudar.</p>
     <p class="lead reveal" style="max-width:520px;margin:0 auto 10px">É rápido, é prático e você consegue fazer porque implementa comigo.</p>
     <p class="brandline reveal">REFÉM DAS EMOÇÕES</p>
-    <p class="subline reveal">3 horas ao vivo no YouTube</p>
+    <p class="subline reveal">3 horas de encontro ao vivo online</p>
     <div class="preco reveal">R$97<small>ingresso único</small></div>
-    <a class="cta big pulse reveal" href="https://google.com">GARANTIR MEU INGRESSO<svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    <a class="cta big pulse reveal" href="#ingresso" data-scroll="ingresso" data-modal="1">GARANTIR MEU INGRESSO<svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
   </div>
 </section>
 </main>
@@ -692,14 +809,14 @@ footer a{color:var(--accent-text);text-decoration:none}
       <span class="whats-icone" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.3 1.6 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22.2c-1.9 0-3.6-.5-5.1-1.4l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.4-1.6-5.3 0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8-4.4 9.6-9.8 9.6zm5.4-7.2c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.6-.7c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.2-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.4c.1.2 2.3 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4 0-.1-.3-.2-.6-.3z"></path></svg></span>
       <span class="whats-texto"><strong>Dúvidas sobre o aulão?</strong><span>Falar no WhatsApp — (85) 99415-7371</span></span>
     </a>
-    <p class="footer-aviso">Aulão ao vivo transmitido no YouTube</p>
+    <p class="footer-aviso">Encontro ao vivo online</p>
     <p class="footer-disclaimer">Os resultados variam de pessoa para pessoa e dependem da sua aplicação do método. Este aulão tem caráter educacional e não substitui acompanhamento psicológico ou médico.</p>
   </div>
 </footer>
 
 <div class="mobcta">
-  <span class="price-s">R$97</span>
-  <a class="cta" href="https://google.com">QUERO PARTICIPAR</a>
+  <a class="mobcta-wa" href="https://wa.me/5585994157371?text=Duvidas%20sobre%20o%20aul%C3%A3o%20Ref%C3%A9m%20das%20emo%C3%A7%C3%B5es%3F" target="_blank" rel="noopener" aria-label="Tirar dúvidas no WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.3 1.6 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22.2c-1.9 0-3.6-.5-5.1-1.4l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.4-1.6-5.3 0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8-4.4 9.6-9.8 9.6zm5.4-7.2c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.6-.7c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.2-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.4c.1.2 2.3 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4 0-.1-.3-.2-.6-.3z"></path></svg></a>
+  <a class="cta" href="#ingresso" data-scroll="ingresso" data-modal="1">QUERO PARTICIPAR</a>
 </div>
 
 <script>
@@ -729,6 +846,146 @@ footer a{color:var(--accent-text);text-decoration:none}
     fr.allowFullscreen=true;
     fr.setAttribute('style','position:absolute;inset:0;width:100%;height:100%;border:0');
     f.parentNode.replaceChild(fr,f);
+  });
+})();
+</script>
+<div class="modal-backdrop" id="modal-espera" data-od-id="modal-lista-espera" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+  <div class="modal">
+    <button class="modal-x" type="button" data-fechar="" aria-label="Fechar aviso"><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+    <span class="modal-badge"><i aria-hidden="true"></i>Novas turmas em breve</span>
+    <h3 id="modal-titulo">Aulão ao vivo — Reféns das Emoções</h3>
+    <p class="modal-sub">As vagas da turma atual se esgotaram e novas turmas estão a caminho. Entre na lista de espera e seja avisado em primeira mão quando a próxima abrir.</p>
+    <form novalidate="">
+      <div class="fld">
+        <label for="f-nome">Nome completo</label>
+        <input id="f-nome" name="nome" type="text" autocomplete="name" placeholder="Como podemos te chamar?">
+        <span class="fld-erro">Informe seu nome completo.</span>
+      </div>
+      <div class="fld">
+        <label for="f-email">E-mail</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" placeholder="seu@email.com">
+        <span class="fld-erro">Informe um e-mail válido.</span>
+      </div>
+      <div class="fld">
+        <label for="f-zap">WhatsApp</label>
+        <input id="f-zap" name="whatsapp" type="tel" autocomplete="tel" inputmode="numeric" placeholder="(85) 99999-9999">
+        <span class="fld-erro">Informe um WhatsApp com DDD (10 ou 11 dígitos).</span>
+      </div>
+      <button class="cta" type="submit"><svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>Quero entrar na lista de espera</button>
+      <p class="modal-fine">Você fica sabendo da abertura antes de todos. Sem spam — só o aviso das turmas.</p>
+      <div class="envio-erro" role="alert"></div>
+    </form>
+    <div class="modal-ok">
+      <div class="ok-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"></path></svg></div>
+      <h4>Você está na lista!</h4>
+      <p>Recebemos seu cadastro, <strong id="ok-nome"></strong>. Assim que a nova turma abrir, avisamos você primeiro.</p>
+      <p class="fine modal-fine">Fique de olho no e-mail e no WhatsApp.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var links=document.querySelectorAll('a[href="#ingresso"]:not([data-modal])');
+  if(!links.length)return;
+  var target=document.getElementById('ingresso');
+  if(!target)return;
+  links.forEach(function(a){
+    a.addEventListener('click',function(ev){
+      ev.preventDefault();
+      var y=target.getBoundingClientRect().top+window.pageYOffset-78;
+      var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({top:Math.max(y,0),behavior:reduce?'auto':'smooth'});
+      history.replaceState(null,'','#ingresso');
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  var EVENTO='Aulão ao vivo — Dominando Suas Emoções';
+  var WEBHOOK='https://auto02-n8n.sergioinfo.com/webhook/3aa3f613-6b04-4522-a0b1-f1d51d0deebe';
+  var triggers=document.querySelectorAll('#cta-lista-espera,a[data-modal]');
+  var bd=document.getElementById('modal-espera');
+  if(!triggers.length||!bd)return;
+  var modal=bd.querySelector('.modal');
+  var form=bd.querySelector('form');
+  var alerta=bd.querySelector('.envio-erro');
+  var nome=document.getElementById('f-nome');
+  var email=document.getElementById('f-email');
+  var zap=document.getElementById('f-zap');
+  var lastFocus=null;
+
+  function open(){
+    lastFocus=document.activeElement;
+    bd.classList.add('open');
+    document.body.style.overflow='hidden';
+    window.setTimeout(function(){nome.focus();},140);
+  }
+  function close(){
+    bd.classList.remove('open');
+    document.body.style.overflow='';
+    if(lastFocus&&lastFocus.focus)lastFocus.focus();
+  }
+  Array.prototype.forEach.call(triggers,function(t){t.addEventListener('click',function(ev){ev.preventDefault();open();});});
+  bd.addEventListener('mousedown',function(e){if(e.target===bd)close();});
+  Array.prototype.forEach.call(bd.querySelectorAll('[data-fechar]'),function(b){b.addEventListener('click',close);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&bd.classList.contains('open'))close();});
+
+  function erroField(input,msg){
+    var f=input.closest('.fld');
+    f.classList.add('show-erro');
+    f.querySelector('.fld-erro').textContent=msg;
+    input.classList.add('erro');
+  }
+  function limpa(input){
+    var f=input.closest('.fld');
+    f.classList.remove('show-erro');
+    input.classList.remove('erro');
+  }
+  [nome,email,zap].forEach(function(i){i.addEventListener('input',function(){limpa(i);alerta.classList.remove('show');});});
+
+  function post(json){
+    return fetch(WEBHOOK,{method:'POST',mode:'cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(json)})
+      .then(function(r){if(!r.ok)throw new Error('http '+r.status);return r;})
+      .catch(function(){
+        return fetch(WEBHOOK,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify(json)})
+          .then(function(){return null;});
+      });
+  }
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    alerta.classList.remove('show');
+    var ok=true;
+    if(nome.value.trim().length<3){erroField(nome,'Informe seu nome completo.');ok=false;}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())){erroField(email,'Informe um e-mail válido.');ok=false;}
+    var dig=zap.value.replace(/\D/g,'');
+    if(dig.length<10||dig.length>11){erroField(zap,'Informe um WhatsApp com DDD (10 ou 11 dígitos).');ok=false;}
+    if(!ok){var first=bd.querySelector('.fld.show-erro input');if(first)first.focus();return;}
+
+    var btn=form.querySelector('.cta');
+    var orig=btn.innerHTML;
+    btn.disabled=true;
+    btn.innerHTML='Enviando&hellip;';
+
+    var n=nome.value.trim(),m=email.value.trim(),w=zap.value.trim();
+    Promise.allSettled([
+      post({evento:EVENTO,nome:n}),
+      post({evento:EVENTO,email:m}),
+      post({evento:EVENTO,whatsapp:w})
+    ]).then(function(rs){
+      btn.disabled=false;
+      btn.innerHTML=orig;
+      var falhou=rs.some(function(r){return r.status==='rejected'});
+      if(falhou){
+        alerta.textContent='Não conseguimos enviar agora. Verifique sua conexão e tente de novo.';
+        alerta.classList.add('show');
+        return;
+      }
+      document.getElementById('ok-nome').textContent=n.split(' ')[0];
+      modal.classList.add('enviado');
+    });
   });
 })();
 </script>
