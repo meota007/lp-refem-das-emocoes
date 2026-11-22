@@ -418,8 +418,8 @@ footer a{color:var(--accent-text);text-decoration:none}
   </div>
 </header>
 
-<section class="hero" id="hero" style="padding-top: 34px; padding-bottom: 34px;">
-  <div class="wrap" style="padding-bottom: 54px;">
+<section class="hero" id="hero" style="padding-top: 34px; padding-bottom: 16px;">
+  <div class="wrap" style="padding-bottom: 32px;">
     <div class="hero-grid">
     <div class="hero-left">
     <p class="eyebrow reveal"><span class="dot" aria-hidden="true"></span>Aulão ao vivo — Dominando Suas Emoções</p>
@@ -460,7 +460,7 @@ footer a{color:var(--accent-text);text-decoration:none}
 </section>
 
 <main>
-<section id="porque" style="padding-bottom: 84px;">
+<section id="porque" style="padding-top: 32px;padding-bottom: 84px;">
   <div class="wrap">
     <div class="diag-ponte-copy reveal">
       <p>Você acorda com <strong>o peito apertado</strong> antes mesmo de sair da cama, passa o dia remoendo aquela conversa, tenta se distrair rolando a tela, se cobra para pensar positivo — e à noite <strong>explode por uma bobagem e dorme com culpa</strong>. No dia seguinte, <strong>tudo recomeça:</strong> a cabeça não desliga, o foco no trabalho trava, a paciência com quem você ama acaba em minutos.
@@ -970,21 +970,16 @@ footer a{color:var(--accent-text);text-decoration:none}
     btn.innerHTML='Enviando&hellip;';
 
     var n=nome.value.trim(),m=email.value.trim(),w=zap.value.trim();
-    Promise.allSettled([
-      post({evento:EVENTO,nome:n}),
-      post({evento:EVENTO,email:m}),
-      post({evento:EVENTO,whatsapp:w})
-    ]).then(function(rs){
+    post({evento:EVENTO,nome:n,email:m,whatsapp:w}).then(function(){
       btn.disabled=false;
       btn.innerHTML=orig;
-      var falhou=rs.some(function(r){return r.status==='rejected'});
-      if(falhou){
-        alerta.textContent='Não conseguimos enviar agora. Verifique sua conexão e tente de novo.';
-        alerta.classList.add('show');
-        return;
-      }
       document.getElementById('ok-nome').textContent=n.split(' ')[0];
       modal.classList.add('enviado');
+    }).catch(function(){
+      btn.disabled=false;
+      btn.innerHTML=orig;
+      alerta.textContent='Não conseguimos enviar agora. Verifique sua conexão e tente de novo.';
+      alerta.classList.add('show');
     });
   });
 })();
