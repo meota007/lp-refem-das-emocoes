@@ -2,14 +2,14 @@
   "note": "Imagens de licença livre (Pexels License — uso comercial permitido, atribuição não obrigatória). Registros mantidos por disciplina de procedência.",
   "images": [
     {
-      "file": "../para-quem.png",
+      "file": "../para-quem.jpg",
       "provider": "fornecida pelo usuário",
       "photoId": null,
       "sourceUrl": null,
       "author": "usuário",
       "license": "direitos do usuário",
       "alt": "Retrato para ilustrar para quem o aulão é indicado (substitui a foto de banco Pexels 8927460)",
-      "replaced": "assets/stock/para-quem.jpg"
+      "replaced": "assets/para-quem.png convertida para JPEG qualidade 85, fundo achatado em #FFFDF7 — 2437 KB → 175 KB"
     },
     {
       "file": "materiais.jpg",
