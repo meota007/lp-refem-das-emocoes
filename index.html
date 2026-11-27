@@ -1107,7 +1107,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           }catch(e){return undefined;}
         })();
         window.dataLayer.push({event:'generate_lead',event_id:uid_lead,user_id:ext_id,external_id:ext_id,email:em,email_address:em,em:em,phone:phone_e164,phone_number:phone_e164,ph:phone_digits,first_name:first_name,fn:fn});
-        window.dataLayer.push({event:'lead',ph:phone_digits,em:em,fn:fn});
+        window.dataLayer.push({event:'lead',event_id:uid_lead,user_id:ext_id,external_id:ext_id,email:em,email_address:em,em:em,phone:phone_e164,phone_number:phone_e164,ph:phone_digits,first_name:first_name,fn:fn});
       }catch(err){}
     }).catch(function(){
       btn.disabled=false;
