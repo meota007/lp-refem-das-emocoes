@@ -1087,11 +1087,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         window.dataLayer=window.dataLayer||[];
         var base=Date.now()+'_'+Math.random().toString(36).slice(2);
         var digitos=w.replace(/\D/g,'');
-        var phone=digitos;
-        if(digitos.length===10||digitos.length===11){phone='+55'+digitos;}
-        else if(digitos.length===12||digitos.length===13){phone='+'+digitos;}
-        window.dataLayer.push({event:'generate_lead',event_id:'lead_'+base,email:m,phone:phone});
-        window.dataLayer.push({event:'generate_lead_refem',event_id:'refem_'+base,email:m,phone:phone});
+        var phone_e164=digitos;
+        if(digitos.length===10||digitos.length===11){phone_e164='+55'+digitos;}
+        else if(digitos.length===12||digitos.length===13){phone_e164='+'+digitos;}
+        var phone_digits=phone_e164.replace(/\D/g,'');
+        var em=m.trim().toLowerCase();
+        var fn=n.split(' ')[0].trim().toLowerCase();
+        var first_name=n.split(' ')[0].trim();
+        var uid_lead='lead_'+base;
+        var uid_refem='refem_'+base;
+        window.dataLayer.push({event:'generate_lead',event_id:uid_lead,user_id:uid_lead,external_id:uid_lead,email:em,email_address:em,em:em,phone:phone_e164,phone_number:phone_e164,ph:phone_digits,first_name:first_name,fn:fn});
+        window.dataLayer.push({event:'generate_lead_refem',event_id:uid_refem,user_id:uid_refem,external_id:uid_refem,email:em,email_address:em,em:em,phone:phone_e164,phone_number:phone_e164,ph:phone_digits,first_name:first_name,fn:fn});
       }catch(err){}
     }).catch(function(){
       btn.disabled=false;
