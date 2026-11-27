@@ -1128,23 +1128,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   }
 
-  Array.prototype.forEach.call(document.querySelectorAll('a[href*="wa.me"]'),function(a,idx){
-    a.addEventListener('click',function(){
-      try{
-        window.dataLayer=window.dataLayer||[];
-        var ext=(function(){
-          try{
-            var mc=document.cookie.match(/(?:^|;\s*)ext_id=([^;]+)/);
-            if(mc&&mc[1]) return mc[1];
-            try{var ls=localStorage.getItem('ext_id'); if(ls) return ls;}catch(e2){}
-          }catch(e){}
-          return undefined;
-        })();
-        var base=Date.now()+'_'+Math.random().toString(36).slice(2);
-        window.dataLayer.push({event:'WppRefem',event_id:'wa_'+base,user_id:ext,external_id:ext,link_url:a.href,link_idx:idx});
-      }catch(err){}
-    });
-  });
 })();
 </script>
 <script>
