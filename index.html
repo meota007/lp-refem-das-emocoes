@@ -1,5 +1,12 @@
 <!doctype html>
 <html lang="pt-BR"><head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TD6R7HW');</script>
+<!-- End Google Tag Manager -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>REFÉM DAS EMOÇÕES — Entenda por que você sente o que sente e aprenda a lidar em 3h ao vivo</title>
@@ -453,6 +460,8 @@ figure.photo.reveal.in img{clip-path:inset(0 0 0 0);transform:none}
 .modal-ok h4{font-family:'Crimson Pro','Commissioner',serif;font-weight:600;font-size:27px;margin:0 0 8px}
 .modal-ok p{font-size:15px;color:var(--muted);margin:0}
 .modal-ok .fine{font-size:12.5px;margin-top:14px}
+.btn-novo{width:100%;margin-top:18px;background:none;border:1.5px solid var(--line);border-radius:14px;padding:13px 20px;font-family:'Commissioner',sans-serif;font-weight:700;font-size:15px;color:var(--text);cursor:pointer;transition:border-color .15s var(--ease-out),background .15s var(--ease-out)}
+@media(hover:hover) and (pointer:fine){.btn-novo:hover{border-color:var(--amber-line);background:var(--card-2)}}
 @media(max-width:480px){.modal{padding:34px 22px 26px;border-radius:20px}.modal h3{font-size:26px}}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -469,6 +478,10 @@ figure.photo.reveal.in img{clip-path:inset(0 0 0 0);transform:none}
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TD6R7HW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <a href="#hero" style="position:absolute;left:-9999px">Ir ao conteúdo</a>
 <div id="progresso" aria-hidden="true"></div>
 
@@ -974,6 +987,7 @@ figure.photo.reveal.in img{clip-path:inset(0 0 0 0);transform:none}
       <h4>Você está na lista!</h4>
       <p>Recebemos seu cadastro, <strong id="ok-nome"></strong>. Assim que a nova turma abrir, avisamos você primeiro.</p>
       <p class="fine modal-fine">Fique de olho no e-mail e no WhatsApp.</p>
+      <button class="btn-novo" type="button" id="btn-novo-cadastro">Fazer novo cadastro</button>
     </div>
   </div>
 </div>
@@ -1069,11 +1083,41 @@ figure.photo.reveal.in img{clip-path:inset(0 0 0 0);transform:none}
       btn.innerHTML=orig;
       document.getElementById('ok-nome').textContent=n.split(' ')[0];
       modal.classList.add('enviado');
+      try{
+        window.dataLayer=window.dataLayer||[];
+        var base=Date.now()+'_'+Math.random().toString(36).slice(2);
+        var digitos=w.replace(/\D/g,'');
+        var phone=digitos;
+        if(digitos.length===10||digitos.length===11){phone='+55'+digitos;}
+        else if(digitos.length===12||digitos.length===13){phone='+'+digitos;}
+        window.dataLayer.push({event:'generate_lead',event_id:'lead_'+base,email:m,phone:phone});
+        window.dataLayer.push({event:'generate_lead_refem',event_id:'refem_'+base,email:m,phone:phone});
+      }catch(err){}
     }).catch(function(){
       btn.disabled=false;
       btn.innerHTML=orig;
       alerta.textContent='Não conseguimos enviar agora. Verifique sua conexão e tente de novo.';
       alerta.classList.add('show');
+    });
+  });
+
+  var btnNovo=document.getElementById('btn-novo-cadastro');
+  if(btnNovo){
+    btnNovo.addEventListener('click',function(){
+      form.reset();
+      [nome,email,zap].forEach(function(i){limpa(i);});
+      alerta.classList.remove('show');
+      modal.classList.remove('enviado');
+      window.setTimeout(function(){nome.focus();},80);
+    });
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('a[href*="wa.me"]'),function(a){
+    a.addEventListener('click',function(){
+      try{
+        window.dataLayer=window.dataLayer||[];
+        window.dataLayer.push({event:'WhatsappRefem'});
+      }catch(err){}
     });
   });
 })();
